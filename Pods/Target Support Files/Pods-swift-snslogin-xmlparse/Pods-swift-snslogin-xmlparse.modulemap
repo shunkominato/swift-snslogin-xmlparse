@@ -1,0 +1,6 @@
+framework module Pods_swift_snslogin_xmlparse {
+  umbrella header "Pods-swift-snslogin-xmlparse-umbrella.h"
+
+  export *
+  module * { export * }
+}
