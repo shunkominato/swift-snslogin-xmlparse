@@ -111,15 +111,26 @@ class ViewController: UIViewController,XMLParserDelegate,UIViewControllerTransit
     }
     
     
+    @IBAction func logout(_ sender: Any) {
+        
+        let firebaseAuth = Auth.auth()
+        self.navigationController?.popViewController(animated: true)
+        do{
+            try firebaseAuth.signOut()
+        } catch let error as NSError{
+            print(error.localizedDescription)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if let controller = segue.destination as? FeedViewController {
-           controller.transitioningDelegate = self
-           controller.modalPresentationStyle = .custom
-           controller.modalPresentationCapturesStatusBarAppearance = true
-           controller.interactiveTransition = interactiveTransition
-           interactiveTransition.attach(to: controller)
-         }
-       }
+        let controller = segue.destination as? FeedViewController
+        controller!.transitioningDelegate = self
+        controller!.modalPresentationStyle = .custom
+        controller!.modalPresentationCapturesStatusBarAppearance = true
+        controller!.interactiveTransition = interactiveTransiton
+        interactiveTransiton.attach(to: controller!)
+        
+    }
 
        
        func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -138,7 +149,7 @@ class ViewController: UIViewController,XMLParserDelegate,UIViewControllerTransit
        }
        
        func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-         return interactiveTransition
+         return interactiveTransiton
        }
 }
 

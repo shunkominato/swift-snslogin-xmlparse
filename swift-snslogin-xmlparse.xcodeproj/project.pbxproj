@@ -17,6 +17,9 @@
 		FA5EE03125EFC27F0062125E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5EE03025EFC27F0062125E /* Assets.xcassets */; };
 		FA5EE03425EFC27F0062125E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5EE03225EFC27F0062125E /* LaunchScreen.storyboard */; };
 		FAE704FE25F3861F00680E92 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE704FD25F3861F00680E92 /* FeedViewController.swift */; };
+		FAE7050225F3AAEF00680E92 /* Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7050125F3AAEF00680E92 /* Feeds.swift */; };
+		FAE7050825F3AD3800680E92 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7050625F3AD3800680E92 /* FeedCell.swift */; };
+		FAE7050925F3AD3800680E92 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE7050725F3AD3800680E92 /* FeedCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		FA5EE03325EFC27F0062125E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5EE03525EFC27F0062125E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAE704FD25F3861F00680E92 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		FAE7050125F3AAEF00680E92 /* Feeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeds.swift; sourceTree = "<group>"; };
+		FAE7050625F3AD3800680E92 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		FAE7050725F3AD3800680E92 /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 			children = (
 				FA5EE02725EFC27E0062125E /* AppDelegate.swift */,
 				FA5EE02925EFC27E0062125E /* SceneDelegate.swift */,
+				FAE7050525F3AD0500680E92 /* View */,
+				FAE7050025F3AAC600680E92 /* Model */,
 				FA2DFC1225F30BF500307C55 /* Controller */,
 				FA5EE02D25EFC27E0062125E /* Main.storyboard */,
 				FA5EE03025EFC27F0062125E /* Assets.xcassets */,
@@ -106,6 +114,23 @@
 				FA2DFC1825F3134500307C55 /* GoogleService-Info.plist */,
 			);
 			path = "swift-snslogin-xmlparse";
+			sourceTree = "<group>";
+		};
+		FAE7050025F3AAC600680E92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAE7050125F3AAEF00680E92 /* Feeds.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAE7050525F3AD0500680E92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAE7050625F3AD3800680E92 /* FeedCell.swift */,
+				FAE7050725F3AD3800680E92 /* FeedCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +196,7 @@
 				FA2DFC1925F3134500307C55 /* GoogleService-Info.plist in Resources */,
 				FA5EE03125EFC27F0062125E /* Assets.xcassets in Resources */,
 				FA5EE02F25EFC27E0062125E /* Main.storyboard in Resources */,
+				FAE7050925F3AD3800680E92 /* FeedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,11 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE7050825F3AD3800680E92 /* FeedCell.swift in Sources */,
 				FA2DFC1625F30C8000307C55 /* LoginViewController.swift in Sources */,
 				FA5EE02C25EFC27E0062125E /* ViewController.swift in Sources */,
 				FAE704FE25F3861F00680E92 /* FeedViewController.swift in Sources */,
 				FA5EE02825EFC27E0062125E /* AppDelegate.swift in Sources */,
 				FA5EE02A25EFC27E0062125E /* SceneDelegate.swift in Sources */,
+				FAE7050225F3AAEF00680E92 /* Feeds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
