@@ -27,6 +27,8 @@ class ViewController: UIViewController,XMLParserDelegate,UIViewControllerTransit
     var currentElementName:String!
     
 
+
+    
     @IBOutlet weak var toFeedButton: UIButton!
     
     @IBOutlet weak var meigenLabel: UILabel!
@@ -95,9 +97,14 @@ class ViewController: UIViewController,XMLParserDelegate,UIViewControllerTransit
     
     @IBAction func sendData(_ sender: Any) {
         if let quote = meigenLabel.text, let userName = Auth.auth().currentUser?.uid{
-            db.collection("feed").addDocument(data:
-                                                ["userName":Auth.auth().currentUser?.displayName,"quote":meigenLabel.text,"photoURL":Auth.auth().currentUser?.photoURL?.absoluteString,"createdAt":Date().timeIntervalSince1970]) { (error) in
+            print(Auth.auth().currentUser?.displayName)
+            print(meigenLabel.text)
+            print(Auth.auth().currentUser?.photoURL?.absoluteString)
+            let data = ["userName":Auth.auth().currentUser?.displayName,"quote":meigenLabel.text,"photoURL":Auth.auth().currentUser?.photoURL?.absoluteString,"createdAt":Date().timeIntervalSince1970] as [String : Any]
+            
+            db.collection("feed").addDocument(data:data) { (error) in
                 if error != nil{
+                    print("error")
                     print(error.debugDescription)
                     return
                 }
@@ -112,11 +119,12 @@ class ViewController: UIViewController,XMLParserDelegate,UIViewControllerTransit
     
     
     @IBAction func logout(_ sender: Any) {
-        
+        print("logout")
         let firebaseAuth = Auth.auth()
         self.navigationController?.popViewController(animated: true)
         do{
             try firebaseAuth.signOut()
+            print("logout")
         } catch let error as NSError{
             print(error.localizedDescription)
         }

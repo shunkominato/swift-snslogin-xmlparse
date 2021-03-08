@@ -115,7 +115,7 @@
                     <navigationItem key="navigationItem" id="eoa-8D-YuC"/>
                     <connections>
                         <outlet property="meigenLabel" destination="xFU-TK-zSj" id="z0m-Qy-SeZ"/>
-                        <outlet property="topFeedButton" destination="uQ7-GI-91X" id="NiC-MV-7nW"/>
+                        <outlet property="toFeedButton" destination="uQ7-GI-91X" id="Wza-9k-0N2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ksg-4o-odg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
